@@ -50,6 +50,9 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# kill all windows in a workspace
+bindsym $mod+Shift+a [workspace="__focused__"] kill
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
@@ -184,7 +187,7 @@ for_window [class="^.*"] border pixel 1
 
 client.background       #ffffff
 
-client.focused          #000000 #1a1a1a #ffffff #cccccc
+client.focused          #000000 #1f1f1f #ffffff #cccccc
 client.unfocused        #000000 #000000 #ffffff #0d0d0d #0d0d0d
 client.focused_inactive #000000 #000000 #ffffff #0d0d0d #0d0d0d
 client.urgent           #c30010 #000000 #ffffff
@@ -198,8 +201,8 @@ bar {
         colors {
                 statusline         #cccccc
 
-                focused_workspace  #252525 #252525 #ffffff
-                active_workspace   #252525 #252525 #ffffff
+                focused_workspace  #2a2a2a #2a2a2a #ffffff
+                active_workspace   #2a2a2a #2a2a2a #ffffff
                 inactive_workspace #000000 #000000 #777777
                 urgent_workspace   #c30010 #c30010 #ffffff
         }
